@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/main.ts",
+    main: "./src/main.tsx",
   },
   output: {
     filename: "[name].js",
@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx$/,
+        test: /\.(ts|tsx)?$/,
         use: {
           loader: "ts-loader"
         },

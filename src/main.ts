@@ -5,4 +5,4 @@
 
 import router from "./router";
 
-router(); //应用路由
+router();

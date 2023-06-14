@@ -5,6 +5,7 @@
     "analyzer": "cross-env Analyzer=on npm run build && webpack-bundle-analyzer --port 8888 ./dist/analyzer.json"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.0",

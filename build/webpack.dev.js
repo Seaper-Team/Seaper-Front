@@ -5,14 +5,10 @@ module.exports = {
   entry: {
     main: "./src/main.ts",
   },
-  output: {
-    filename: "[name].js",
-    path: path.join(__dirname, "dist"),
-  },
   module: {
     rules: [
       {
-        test: /\.tsx$/,
+        test: /\.(ts|tsx)?$/,
         use: {
           loader: "ts-loader"
         },
@@ -27,5 +23,11 @@ module.exports = {
       template: "./public/index.html",
     }),
   ],
+  devServer: {
+    port: 8087,
+    proxy: {
+      '/api': 'http://127.0.0.1:8088'
+    },
+  },
   mode: "development",
 };
