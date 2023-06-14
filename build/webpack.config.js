@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/main.tsx",
+    main: "./src/main.ts",
   },
   output: {
     filename: "[name].js",
@@ -25,6 +25,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      filename: "index.html"
     }),
   ],
   mode: "production",

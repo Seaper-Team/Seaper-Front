@@ -8,10 +8,12 @@ import { createRoot } from "react-dom/client";
 import { createHashRouter, RouterProvider} from "react-router-dom";
 import Root from "./router/Root";
 import NotFound from "./router/NotFound";
+import Init from "./router/Init";
 
 export default () => {
 	const router = createHashRouter([
 		{ path: "/", element: <Root />},
+		{ path: "/init", element: <Init />},
 		{ path: "*", element: <NotFound />}
 	]);
 

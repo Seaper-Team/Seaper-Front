@@ -4,13 +4,12 @@
  */
 
 import axios from "axios";
-import { ResponseData } from "src/model/ResponseData";
 
 /**
  * 发送 Api 请求
  */
 export async function apiReq(a:string, method:string, data?:any, params?:any){
-    const req = await axios.request<ResponseData>({
+    const req = await axios.request({
         method: method,
         url: a,
         data: data,
