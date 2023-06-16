@@ -9,14 +9,26 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)?$/,
-        use: {
-          loader: "ts-loader"
-        },
+        use: ["ts-loader"],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]_[hash:base64:5]', 
+              }
+            },
+          }
+        ],
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".css"],
   },
   plugins: [
     new HtmlWebpackPlugin({

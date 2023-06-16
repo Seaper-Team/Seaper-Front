@@ -1,0 +1,16 @@
+{
+  "id": "4125026",
+  "name": "Seaper Icon",
+  "font_family": "seaperIcon",
+  "css_prefix_text": "sicon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4347518",
+      "name": "icon_发布",
+      "font_class": "publish",
+      "unicode": "eb88",
+      "unicode_decimal": 60296
+    }
+  ]
+}

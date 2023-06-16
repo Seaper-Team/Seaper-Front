@@ -1,0 +1,183 @@
+/* 淡入动画 */
+@keyframes card-fi {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card {
+    animation: card-fi ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes icon-fi {
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.icon {
+    animation: icon-fi ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* 基本类型 */
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(223, 239, 245);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    font-size: 18px;
+    font-weight: 250;
+    text-align: center;
+}
+
+.card {
+    z-index: 0;
+    width: auto;
+    height: auto;
+
+    padding: 35px;
+    padding-left: 70px;
+    padding-right: 70px;
+    
+    border: 1px solid rgba(247, 247, 247, 0.9);
+    background: linear-gradient(
+        135.00deg,
+        rgba(223.13,222.9,222.9,0.02) 0%,
+        rgba(214.02,213.8,213.8,0.50) 95%
+    );
+    box-shadow: 
+        0px 0px 0px rgba(14, 37, 46, 0.1),
+        9px 10px 30px rgba(14, 37, 46, 0.1),
+        38px 39px 54px rgba(14, 37, 46, 0.09),
+        84px 88px 73px rgba(14, 37, 46, 0.05),
+        150px 157px 87px rgba(14, 37, 46, 0.01),
+        234px 245px 95px rgba(14, 37, 46, 0);
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card::before {
+    z-index: -99;
+    backdrop-filter: blur(100px);
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 250;
+    margin: 0;
+}
+
+.des {
+    margin-top: 25px;
+    margin-bottom: 45px;
+
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+
+    background: linear-gradient(
+        135.00deg,
+        rgba(89.28,173.8,242.48,1.00) 0%,
+        rgba(134.12,195.52,245.89,1.00) 100%
+    );
+    box-shadow: 
+        0px 0px 0px rgba(0, 0, 0, 0.1),
+        3px 2px 8px rgba(0, 0, 0, 0.1),
+        12px 8px 14px rgba(0, 0, 0, 0.09),
+        27px 19px 19px rgba(0, 0, 0, 0.05),
+        47px 33px 23px rgba(0, 0, 0, 0.01),
+        74px 52px 25px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background: linear-gradient(
+        135.00deg,
+        rgb(108, 184, 247) 0%,
+        rgb(160, 208, 247) 100%
+    );
+}
+
+.btn:active {
+    background: linear-gradient(
+        135.00deg,
+        rgb(134, 192, 240) 0%,
+        rgb(177, 211, 238) 100%
+    );
+}
+
+
+.btn_text {
+    font-size: 25px;
+    font-weight: 250;
+}
+
+.icon {
+    z-index: -1;
+
+    position: absolute;
+    left: 50%;
+    margin-left: -130px;
+
+    font-size: 250px;
+    opacity: 0.1;
+    color: #808080;
+}
+
+/* 自适应 */
+
+@media (max-width: 650px) or (max-height: 400px) {
+    .card {
+        width: 100%;
+        height: 100%;
+        
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        border: 0;
+        border-radius: 0;
+    }
+}

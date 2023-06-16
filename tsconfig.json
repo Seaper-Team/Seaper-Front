@@ -20,11 +20,9 @@
     "paths": {
       "@": ["src/"]
     },
-    "lib": [
-      "es5",
-      "dom",
-      "es2015.promise"
-    ]
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "src",
+    "typed-css.d.ts"
+  ]
 }
