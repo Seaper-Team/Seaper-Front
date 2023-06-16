@@ -13,7 +13,7 @@ export default () => {
     const [step, setStep] = useState(1);
 
     function nextStep() {
-        if(step == 4){
+        if (step == 4){
             navigate("/");
             return;
         }
@@ -38,7 +38,7 @@ export default () => {
             <div className={`${aniStatus == 0 || aniStatus == 3 ? style.show : style.hide} ${aniStatus == 2 ? style.ready : ""}`}>
                 <div className={style.card}>
                     <p className={style.title}>欢迎使用 Seaper 管理系统</p>
-                    <p className={style.des}>Hi！欢迎使用 Seaper！<br/>看起来您是刚刚启动 Seaper，让我们开始安装引导吧！</p>
+                    <p className={style.des}>Hi! 欢迎使用 Seaper!<br/>看起来您是刚刚启动 Seaper, 让我们开始安装引导吧!</p>
                     <div className={style.btn} onClick={nextStep}>
                         <p className={style.btn_text}>{step == 1 ? "开始" : step == 4 ? "完成" : "继续"}</p>
                     </div>

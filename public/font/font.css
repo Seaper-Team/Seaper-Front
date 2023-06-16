@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "AlibabaPuHuiTi";
+  src: url('AlibabaPuHuiTi-3-35-Thin.woff2') format('woff2'),
+       url('AlibabaPuHuiTi-3-35-Thin.woff') format('woff'),
+       url('AlibabaPuHuiTi-3-35-Thin.ttf') format('truetype');
+}
+
+body {
+	font-family: "AlibabaPuHuiTi";
+}
