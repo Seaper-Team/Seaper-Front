@@ -36,6 +36,8 @@
 /* 基本类型 */
 
 .background {
+    z-index: -10;
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -46,6 +48,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
 }
 
 .note {
@@ -87,6 +91,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 }
 
 .card::before {
@@ -157,13 +163,66 @@
 .icon {
     z-index: -1;
 
+    width: 250px;
+    height: 250px;
+
     position: absolute;
-    left: 50%;
-    margin-left: -130px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 
     font-size: 250px;
     opacity: 0.1;
     color: #808080;
+}
+
+/* 页面切换 */
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all ease 1s;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateX(-70vw);
+    transition: all ease 1s;
+}
+
+.ready {
+    transform: translateX(70vw);
+}
+
+/* 步进动画 */
+
+.aniBack {
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+.ani {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.aniShow {
+    opacity: 1;
+    transition: all ease 1s;
+}
+
+.aniHide {
+    opacity: 0;
+    transition: all ease 1s;
 }
 
 /* 自适应 */
@@ -179,5 +238,15 @@
 
         border: 0;
         border-radius: 0;
+    }
+
+    .show {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hide {
+        width: 100%;
+        height: 100%;
     }
 }

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "seaperIcon"; /* Project id 4125026 */
-  src: url('iconfont.woff2?t=1686841799760') format('woff2'),
-       url('iconfont.woff?t=1686841799760') format('woff'),
-       url('iconfont.ttf?t=1686841799760') format('truetype');
+  src: url('iconfont.woff2?t=1686921307884') format('woff2'),
+       url('iconfont.woff?t=1686921307884') format('woff'),
+       url('iconfont.ttf?t=1686921307884') format('truetype');
 }
 
 .seaperIcon {
@@ -11,6 +11,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.sicon-earth:before {
+  content: "\e600";
+}
+
+.sicon-user:before {
+  content: "\e788";
+}
+
+.sicon-ok:before {
+  content: "\e654";
 }
 
 .sicon-publish:before {
