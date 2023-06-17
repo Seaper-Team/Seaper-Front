@@ -99,14 +99,16 @@
 }
 
 .title {
+    max-width: 500px;
     font-size: 40px;
     margin: 0;
+    text-align: center;
     white-space: pre-wrap;
 }
 
 .des {
     margin-top: 25px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     max-width: 450px;
 
     font-size: 18px;
@@ -117,6 +119,8 @@
 .btn {
     width: 150px;
     height: 50px;
+    
+    margin-top: 30px;
 
     background: linear-gradient(
         135.00deg,
@@ -221,6 +225,27 @@
 .aniHide {
     opacity: 0;
     transition: all ease 1s;
+}
+
+/* 独立页面 */
+.lang {
+    width: 250px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.formItem:first-child {
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.input {
+    width: 220px;
+    margin-left: 10px;
 }
 
 /* 自适应 */

@@ -14,6 +14,9 @@ export async function apiReq(url:string, method:string, data?:any, params?:any){
         url: url,
         data: data,
         params: params,
+        validateStatus: (status: number) => {
+            return status == 200 || status == 400;
+        }
     });
 
     //请求码
@@ -39,4 +42,6 @@ const USER = API + "/user";
 export const USER_INIT = USER + "/init";
 
 const LANG = API + "/lang";
-export const LANG_GET = LANG + "/get"
+export const LANG_GET = LANG + "/get";
+export const LANG_LIST = LANG + "/list";
+export const LANG_INIT = LANG + "/init";
