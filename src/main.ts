@@ -4,8 +4,10 @@
  */
 
 import router from "./router";
+import I18NManager from "./util/i18n";
 
 //初始化国际化
+await I18NManager.initLang();
 
 //加载路由
 router();

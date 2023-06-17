@@ -8,10 +8,10 @@ import axios from "axios";
 /**
  * 发送 Api 请求
  */
-export async function apiReq(a:string, method:string, data?:any, params?:any){
+export async function apiReq(url:string, method:string, data?:any, params?:any){
     const req = await axios.request({
         method: method,
-        url: a,
+        url: url,
         data: data,
         params: params,
     });
@@ -21,6 +21,10 @@ export async function apiReq(a:string, method:string, data?:any, params?:any){
         throw new Error("Error Response Code!");
     }
 
+    //是否为非根
+    if(req.data.status == undefined){
+        return req.data.data;
+    }
     return req.data;
 }
 
@@ -29,7 +33,10 @@ export async function apiReq(a:string, method:string, data?:any, params?:any){
 /**
  * Api 路径集
  */
-const API = "/api"
+const API = "/api";
 
-const USER = API + "/user"
+const USER = API + "/user";
 export const USER_INIT = USER + "/init";
+
+const LANG = API + "/lang";
+export const LANG_GET = LANG + "/get"

@@ -5,6 +5,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import i18n from "../util/i18n";
 import style from '../css/init.module.css';
 
 export default () => {
@@ -37,10 +38,10 @@ export default () => {
         <div className={style.background}>
             <div className={`${aniStatus == 0 || aniStatus == 3 ? style.show : style.hide} ${aniStatus == 2 ? style.ready : ""}`}>
                 <div className={style.card}>
-                    <p className={style.title}>欢迎使用 Seaper 管理系统</p>
-                    <p className={style.des}>Hi! 欢迎使用 Seaper!<br/>看起来您是刚刚启动 Seaper, 让我们开始安装引导吧!</p>
+                    <p className={style.title}>{i18n.msg("init.p" + step + "-title")}</p>
+                    <p className={style.des}>{i18n.msg("init.p" + step + "-des")}<br/></p>
                     <div className={style.btn} onClick={nextStep}>
-                        <p className={style.btn_text}>{step == 1 ? "开始" : step == 4 ? "完成" : "继续"}</p>
+                        <p className={style.btn_text}>{step == 1 ? i18n.msg("step.start") : step == 4 ? i18n.msg("step.over") : i18n.msg("step.next")}</p>
                     </div>
                     <i className={`seaperIcon sicon-${
                         step == 1 ? "publish" : 
