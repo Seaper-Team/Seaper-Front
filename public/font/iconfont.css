@@ -1,8 +1,6 @@
 @font-face {
-  font-family: "seaperIcon"; /* Project id 4125026 */
-  src: url('iconfont.woff2?t=1686921307884') format('woff2'),
-       url('iconfont.woff?t=1686921307884') format('woff'),
-       url('iconfont.ttf?t=1686921307884') format('truetype');
+  font-family: "seaperIcon";
+  src: url('iconfont.ttf?t=1686921307884') format('truetype');
 }
 
 .seaperIcon {
