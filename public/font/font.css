@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "HarmonyOSHans";
-  src: url('HarmonyOSHans-Light.woff2') format('woff2');
+  font-family: "HarmonyOS_Sans";
+  src: url('HarmonyOS_Sans_SC_Light.ttf') format('truetype');
 }
 
 body {
-	font-family: "HarmonyOSHans";
+	font-family: "HarmonyOS_Sans";
 }
