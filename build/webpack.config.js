@@ -81,7 +81,7 @@ module.exports = {
       chunks: "all"
     }),
     new MiniCssExtractPlugin(),
-    new BundleAnalyzerPlugin(),
+    //new BundleAnalyzerPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
