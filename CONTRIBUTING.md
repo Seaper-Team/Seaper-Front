@@ -7,6 +7,8 @@
 ## 组织
 
 ### Sky World Studio (星空世界工作室)
+- [@HeimNad](https://github.com/HeimNad) (SkyWorldStudio 负责人，服务器提供，早期测试)
+- [@Paimon](https://github.com/Paimon) (测试)
 - [@Xiaoyi311](https://github.com/Xiaoyi311) (前后端主编)
 
 ## 个人
