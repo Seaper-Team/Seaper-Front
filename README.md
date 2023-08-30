@@ -40,11 +40,11 @@ Seaper Server Manager (简称 Seaper) 是一个**全新的，全能的，简洁�
 
 ## 使用方法
 
-介于文件限制，详细用法见 [Seaper Wiki]()
+介于文件限制，详细用法见 [Seaper Wiki](https://github.com/Seaper-Team/Seaper-Docs)
 
 ## API
 
-所有关于 Seaper 的 API 均可在 [Seaper API](https://docs.skyworldstudio.top/seaper) 查看
+所有关于 Seaper 的 API 均可在 [Seaper API](https://github.com/Seaper-Team/Seaper-API) 查看
 
 ## 贡献者
 
