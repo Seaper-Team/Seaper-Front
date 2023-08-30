@@ -1,0 +1,47 @@
+/* 基本类型 */
+.background {
+    z-index: -10;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url("/public/image/Login.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.note {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    font-size: 18px;
+    text-align: center;
+
+    color: white;
+}
+
+.opaCard {
+    z-index: 0;
+    width: auto;
+    height: auto;
+
+    padding: 100px;
+
+    background: rgb(193, 221, 240, 0.5);
+    box-shadow: 0px 0px 0px rgba(7, 22, 44, 0.1),
+                18px 11px 46px rgba(7, 22, 44, 0.1),
+                73px 43px 84px rgba(7, 22, 44, 0.09),
+                163px 96px 114px rgba(7, 22, 44, 0.05),
+                291px 170px 135px rgba(7, 22, 44, 0.01),
+                454px 266px 147px rgba(7, 22, 44, 0);
+    border-radius: 50px;
+}

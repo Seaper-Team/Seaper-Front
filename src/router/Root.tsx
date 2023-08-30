@@ -4,7 +4,7 @@
  */
 
 import { useNavigate } from "react-router-dom";
-import { USER_INIT, apiReq } from "../util/api";
+import { USER_INIT, apiReq, getUserInfo } from "../util/api";
 
 export default () => {
     const navigate = useNavigate();
@@ -13,6 +13,13 @@ export default () => {
     apiReq(USER_INIT, "GET").then((init) => {
         if(init.data == false){
             navigate("/init");
+        }
+    });
+
+    //是否登录
+    getUserInfo().then((info) => {
+        if(info.status == 403){
+            navigate("/login");
         }
     });
 

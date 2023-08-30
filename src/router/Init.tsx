@@ -19,14 +19,13 @@ export default () => {
     const [user, setUser] = useState({
         username: "",
         password: ""
-    })
-
-    let lang: string = "";
+    });
+    const [lang, setLang] = useState("");
 
     /**
      * 语言更改
      */
-    function langChange(value: string) { lang = value; }
+    function langChange(value: string) { setLang(value); }
 
     /**
      * 语言更改
