@@ -1,6 +1,6 @@
 {
   "name": "seaper-front",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Seaper Powered By Xiaoyi311 & SWS",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.js",

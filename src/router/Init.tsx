@@ -10,6 +10,7 @@ import userM from "../service/user";
 import style from '../css/init.module.css';
 import { Input, Select, notification } from 'antd';
 import { Md5 } from 'ts-md5';
+import I18n from '../components/I18n';
 
 export default () => {
     const navigate = useNavigate();
@@ -157,8 +158,8 @@ export default () => {
         <div className={style.background}>
             <div className={`${aniStatus == 0 || aniStatus == 3 ? style.show : style.hide} ${aniStatus == 2 ? style.ready : ""}`}>
                 <div className={style.card}>
-                    <p className={style.title}>{i18n.msg("init.p" + step + "-title")}</p>
-                    <p className={style.des}>{i18n.msg("init.p" + step + "-des")}<br/></p>
+                    <p className={style.title}><I18n node={"init.p" + step + "-title"}/></p>
+                    <p className={style.des}><I18n node={"init.p" + step + "-des"}/></p>
                     {
                         step == 2 ? 
                         <div>
@@ -180,7 +181,7 @@ export default () => {
                         step == 3 ? 
                         <div className={style.form}>
                             <div className={style.formItem}>
-                                {i18n.msg("user.username")}:
+                                <I18n node="user.username"/>:
                                 <Input
                                     className={style.input}
                                     status={isOk[1] ? "" : "error"}
@@ -189,7 +190,7 @@ export default () => {
                                 />
                             </div>
                             <div className={style.formItem}>
-                                {i18n.msg("user.password")}:
+                                <I18n node="user.password"/>:
                                 <Input.Password
                                     className={style.input}
                                     status={isOk[2] ? "" : "error"}
@@ -201,7 +202,7 @@ export default () => {
                         : null
                     }
                     <div className={style.btn} onClick={nextStep}>
-                        <p className={style.btn_text}>{step == 1 ? i18n.msg("step.start") : step == 4 ? i18n.msg("step.over") : i18n.msg("step.next")}</p>
+                        <p className={style.btn_text}><I18n node={step == 1 ? "step.start" : step == 4 ? "step.over" : "step.next"}/></p>
                     </div>
                     <i className={`seaperIcon sicon-${
                         step == 1 ? "publish" : 

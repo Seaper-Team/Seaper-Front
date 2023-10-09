@@ -8,7 +8,7 @@ import axios from "axios";
 /**
  * 发送 Api 请求
  */
-export async function apiReq(url:string, method:string, data?:any, params?:any){
+export async function apiReq(url:string, method:string, data?:any, params?:any): Promise<any>{
     const req = await axios.request({
         method: method,
         url: url,
@@ -24,10 +24,6 @@ export async function apiReq(url:string, method:string, data?:any, params?:any){
         throw new Error("Error Response Code!");
     }
 
-    //是否为非根
-    if(req.data.status == undefined){
-        return req.data.data;
-    }
     return req.data;
 }
 
@@ -48,10 +44,6 @@ export async function getUserInfo(){
         throw new Error("Error Response Code!");
     }
 
-    //是否为非根
-    if(req.data.status == undefined){
-        return req.data;
-    }
     return req;
 }
 
@@ -65,6 +57,8 @@ const API = "/api";
 const USER = API + "/user";
 export const USER_INIT = USER + "/init";
 export const USER_INFO = USER + "/info";
+const USER_AUTH = API + "/user/auth";
+export const USER_AUTH_LOGIN = USER_AUTH + "/login";
 
 const LANG = API + "/lang";
 export const LANG_GET = LANG + "/get";

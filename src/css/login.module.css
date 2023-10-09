@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
 /* 基本类型 */
 .background {
     z-index: -10;
@@ -11,13 +21,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: url("/public/image/Login.png");
-    background-size: cover;
-    background-position: center;
 }
 
-.note {
+.pageNote {
     position: absolute;
     left: 0;
     right: 0;
@@ -25,16 +31,15 @@
 
     font-size: 18px;
     text-align: center;
-
     color: white;
 }
 
 .opaCard {
+    animation: fadeIn 0.8s ease-in-out;
     z-index: 0;
-    width: auto;
-    height: auto;
 
-    padding: 100px;
+    display: flex;
+    position: absolute;
 
     background: rgb(193, 221, 240, 0.5);
     box-shadow: 0px 0px 0px rgba(7, 22, 44, 0.1),
@@ -44,4 +49,210 @@
                 291px 170px 135px rgba(7, 22, 44, 0.01),
                 454px 266px 147px rgba(7, 22, 44, 0);
     border-radius: 50px;
+}
+
+.loginImg{
+    margin: 20px;
+    margin-bottom: 0;
+    margin-top: 25px;
+    height: 613px;
+}
+
+.panel{
+    transition: right 1s ease-in-out;
+    width: 590px;
+    height: 100%;
+    position: absolute;
+
+    background-color: rgb(225, 241, 255);
+    box-shadow: 0px 0px 0px 0px rgba(7, 22, 44, 0.1),
+                -3px 0px 6px 0px rgba(7, 22, 44, 0.1),
+                -11px 0px 11px 0px rgba(7, 22, 44, 0.09),
+                -25px 0px 15px 0px rgba(7, 22, 44, 0.05),
+                -44px 0px 17px 0px rgba(7, 22, 44, 0.01),
+                -68px 0px 19px 0px rgba(7, 22, 44, 0);
+    border-radius: 50px;
+
+    right: 0;
+}
+
+.panels{
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title span{
+    font-size: 38px;
+    flex-basis: 50%;
+}
+
+.title :nth-child(1){
+    text-align: right;
+    margin-right: 20px;
+}
+
+.title :nth-child(3){
+    text-align: left;
+    margin-left: 20px;
+}
+
+.title img{
+    height: 80px;
+    flex-basis: 80px;
+
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+                1px 1px 4px 0px rgba(0, 0, 0, 0.1),
+                6px 4px 7px 0px rgba(0, 0, 0, 0.09),
+                12px 10px 9px 0px rgba(0, 0, 0, 0.05),
+                22px 17px 11px 0px rgba(0, 0, 0, 0.01),
+                34px 27px 12px 0px rgba(0, 0, 0, 0);
+
+    border-radius: 50px;
+}
+
+.diver{
+    opacity: 0.8;
+    border: 1px solid rgb(126, 176, 217);
+    
+    margin: 20px 10px;
+}
+
+.pageTitle{
+    font-size: 50px;
+}
+
+.pageDes{
+    margin: 10px 0;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.pageDes li{
+    line-height: 22px;
+    margin-left: 10px;
+}
+
+.pageSTitle{
+    font-size: 22px;
+    margin-top: 9px;
+}
+
+.login{
+    min-width: 500px;
+
+    margin: 10px 0;
+    padding: 0 10px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.loginInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 0.6;
+}
+
+.input{
+    margin-top: 8px;
+    height: 35px;
+}
+
+.btn{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn button{
+    flex-grow: 1;
+    font-size: 15px;
+}
+
+.note{
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    color: rgb(95, 95, 95);
+}
+
+.note span{
+    max-width: 500px;
+    font-size: 12px;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 17px;
+}
+
+.bottomImg{
+    width: 100%;
+    height: 150px;
+    border-radius: 0 0 49px 29px;
+    position: absolute;
+}
+
+@media (max-width: 1170px) or (max-height: 800px){
+    .loginImg{
+        display: none;
+    }
+
+    .bottomImg{
+        display: none;
+    }
+
+    .background{
+        display: block;
+    }
+
+    .opaCard{
+        border-radius: 0;
+        display: block;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .panel{
+        right: 0 !important;
+        border-radius: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(225, 241, 255, 0.6);
+    }
+
+    .panels{
+        padding: 0;
+        padding-bottom: 0;
+        margin: 0 177px
+    }
+
+    .bottomImg{
+        border-radius: 0;
+    }
+
+    .pageNote {
+        color: black;
+    }
 }

@@ -2,3 +2,5 @@ node_modules
 dist
 .vscode
 .VSCodeCounter
+*/.DS_Store
+.DS_Store

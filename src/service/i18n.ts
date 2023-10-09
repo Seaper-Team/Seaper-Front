@@ -39,7 +39,12 @@ export default new class I18NManager {
         nodes.split(".").forEach(node => {
             data = data[node];
         });
-        return data == undefined ? nodes : data;
+
+        if(data == undefined){
+            return nodes;
+        }
+
+        return data;
     }
 
     /**

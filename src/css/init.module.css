@@ -107,7 +107,7 @@
 }
 
 .des {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 25px;
     max-width: 450px;
 
@@ -135,6 +135,8 @@
         47px 33px 23px rgba(0, 0, 0, 0.01),
         74px 52px 25px rgba(0, 0, 0, 0);
     border-radius: 10px;
+    border: rgb(184, 211, 255);
+    border-style: solid;
 
     display: flex;
     justify-content: center;
